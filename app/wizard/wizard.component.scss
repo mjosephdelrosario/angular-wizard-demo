@@ -1,0 +1,42 @@
+.wizard {
+  background: #fff;
+  padding: 1em 2em;
+  width: 30em;
+  box-shadow: 0 0.1em 0.15em rgba(0, 0, 0, 0.2);
+}
+
+.alert {
+  > label {
+    margin-bottom: 0em !important;
+  }
+}
+
+button {
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  background-color: #9d62c8;
+  outline: 0;
+  line-height: 1;
+  text-align: center;
+  padding: 1em 2em;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 2px;
+  display: inline-block;
+  border: none;
+  color: #fff;
+  transition: background-color .3s, box-shadow .3s;
+  margin : 0em 0.3em;
+
+  &:hover {
+    background-color: #a46dcc;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled {
+    background: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.4);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
