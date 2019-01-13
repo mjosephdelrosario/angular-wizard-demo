@@ -204,14 +204,13 @@ export class WizardComponent implements AfterViewInit {
   }
 
   post(url: string, model: any): Observable <any> {
+    console.log(model);
     let formData: FormData = new FormData();
-    formData.append('id', model.id);
-    formData.append('applicationName', model.applicationName);
-    // return this.http.post(url, formData)
-    //     .map((response: Response) => {
-    //       return response;
-    //     }).catch(this.handleError);
-    return this.http.post(url, formData);
+    const headers = new Headers({
+          'Content-Type': 'application/json'
+    });
+    formData.append("wizardData", JSON.stringify(model));
+    return this.http.post(url, formData, headers);
   }
 
   /**
