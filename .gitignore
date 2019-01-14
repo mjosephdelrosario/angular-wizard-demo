@@ -27,4 +27,3 @@ build
 vendor/*.json
 
 *.iml
-*.lock
